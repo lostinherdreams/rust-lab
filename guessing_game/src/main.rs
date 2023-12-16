@@ -32,6 +32,7 @@ fn main() {
         println!("You gussed : {guess}");
 
         //shadowing  --> didnt need a new variable #explain later
+
         let guess: u32 = match guess.trim().parse() {
             Ok(num) =>num,
             Err(_) =>{
@@ -43,6 +44,8 @@ fn main() {
         };
         /* trim()' removes leading/trailing whitespaces and '\n'
         prease --> converting type (string -> :u32); return a result [Err , ok]*/
+
+        //<in other way> let guss = guess.trim().parse().expect("Please type a number!");
 
 
         /* Use 'cmp()' to compare the guess with the secret number.
